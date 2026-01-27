@@ -1,0 +1,2 @@
+date,time,platform,project,n,a,cpu_numpy_ms,fpga_kernel_ms,fpga_e2e_ms,speedup_kernel,speedup_e2e,max_error,notes
+2026-01-28,06:10:46,PYNQ-Z2,saxpy,1000000,2.5,68.117,211.247,211.860,0.32,0.32,0,"First end-to-end run; 64-bit addr regs x_1/x_2,y_1/y_2"
