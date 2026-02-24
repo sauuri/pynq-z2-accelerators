@@ -4,10 +4,15 @@ PYNQ-Z2에서 동작하는 FPGA 가속기 모음입니다.
 A collection of FPGA accelerator projects for PYNQ-Z2.
 
 ## Projects
-- **[pynq_saxpy_accel](./pynq_saxpy_accel)**  
-  SAXPY (`Y = aX + Y`) end-to-end 가속: **Vitis HLS 커널 + AXI DMA + Python 호스트**  
+- **[pynq_saxpy_accel](./pynq_saxpy_accel)**
+  SAXPY (`Y = aX + Y`) end-to-end 가속: **Vitis HLS 커널 + AXI DMA + Python 호스트**
   - Demo: `docs/demo.gif` (추가 예정)
   - Result: `docs/results.md` (SW 대비 속도 향상 요약)
+
+- **[pynq_fft1d_medical](./pynq_fft1d_medical)**
+  1D FFT 가속기 (EMG 근전도 신호 분석): **Xilinx HLS FFT IP + M_AXI + Python 호스트**
+  - 1024-point FFT, float32, 4 kHz EMG 샘플링
+  - Median / Mean Frequency 기반 근육 피로도 분석 (MDF / MNF)
 
 ## Repository layout (rule)
 - `projects/*` 또는 최상위 폴더별로 “한 프로젝트 = 한 폴더”
