@@ -1,7 +1,7 @@
 # pynq_fft1d_medical
 
 PYNQ-Z2에서 동작하는 **1D FFT FPGA 가속기** — EMG(근전도) 신호 분석용
-1D FFT accelerator for **EMG signal analysis** on PYNQ-Z2.
+1D FFT accelerator for **EMG signal analysis** on PYNQ-Z2. 
 
 ---
 
