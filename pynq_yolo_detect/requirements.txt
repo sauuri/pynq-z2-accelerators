@@ -1,0 +1,15 @@
+torch>=2.0.0
+torchvision>=0.15.0
+onnx>=1.14.0
+onnxruntime>=1.15.0
+numpy>=1.24.0
+Pillow>=9.0.0
+
+# YOLOv8 (optional but recommended for best accuracy)
+# ultralytics>=8.0.0
+
+# For visualization
+# opencv-python-headless>=4.8.0
+
+# Optional: HLS toolchain
+# hls4ml[ONNX]>=0.8.0

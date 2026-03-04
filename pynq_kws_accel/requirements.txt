@@ -1,0 +1,13 @@
+torch>=2.0.0
+numpy>=1.24.0
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Audio processing (required for real data)
+torchaudio>=0.15.0
+
+# Real-time microphone (optional)
+# pyaudio>=0.2.13
+
+# Optional: HLS toolchain
+# hls4ml[ONNX]>=0.8.0

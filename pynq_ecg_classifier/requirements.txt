@@ -1,0 +1,14 @@
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Optional: real MIT-BIH data via wfdb
+# wfdb>=4.1.0
+
+# Optional: scipy for ECG resampling
+# scipy>=1.10.0
+
+# Optional: HLS toolchain
+# hls4ml[ONNX]>=0.8.0
