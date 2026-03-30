@@ -1,7 +1,7 @@
 # 코드 분석
 
 ## SAXPY Header(saxpy.h)
-```
+```cpp
 #pragma once
 #include <ap_int.h>
 
@@ -13,14 +13,11 @@ extern "C" void saxpy(
 );
 ```
 
-```
-# pragma once
-```
-- 헤더 중복 include 방지. #ifndef SAXPY_H 가드랑 동일.
+### `# pragma once`
+- 헤더 중복 include 방지한다.
+- `#ifndef SAXPY_H` 형태의 include guard와 같은 목적을 가진다..
 
-``` 
-include <ap_int.h>
-```
+### `include <ap_int.h>`
 - Xilinx Vitis HLS 전용 헤더. ap_int<N>, ap_uint<N> 같은 임의 비트폭 정수 타입 제공.
 - HLS에서는 비트 수를 내가 직접 정할 수 있는 정수형을 제공함
 - 왜? FPGA는 비트 수가 곧 하드웨어 크기랑 연결되는데 필요한 만큼의 비트를 써서
@@ -30,12 +27,10 @@ include <ap_int.h>
     - '<N>' = 비트 수
     - 즉: N비트짜리 부호 있는(없는) 정수
 
-```
-extern "C"
-```
+### `extern "C"`
 - C++ 컴파일러는 함수 이름을 mangling 함
 - 예를 들어 saxpy가 _Z5saxpyPKFPffi 같이 변형이 될 수 있는데
-- Vitis HLS는 커널 함수를 이름으로 찾는데, mangling 되면 못 찾음.
+- Vitis HLS는 커널 함수를 이름으로 찾는데, name mangling 되면 못 찾음.
 - extern "C"가 이걸 막아줌.
 
 
