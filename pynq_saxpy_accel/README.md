@@ -3,10 +3,19 @@
 SAXPY (`Y = aX + Y`)를 PYNQ-Z2에서 DMA 기반 end-to-end로 가속합니다.  
 Vitis HLS로 커널 생성 → Vivado bitstream → PYNQ(Python)에서 실행/벤치마크.
 
+SAXPY란?
+= Single-Precision A X Plus Y
+- S = Single precision(float)
+- A = 스칼라 값 a
+- X = 벡터 X
+- Plus Y = Y에 더함
+즉, float 타입으로 하는 `aX + Y` 연산(배열 X를 a배 해서 배열 Y에 더하는 연산)
+
 ## What it does
 - Data type: `float32`
 - Vector length: configurable (default: 65536)
 - Compare: CPU(NumPy) vs FPGA(DMA+HLS)
+- 1백만 개 숫자를 SAXPY 공식으로 처리하는 것.
 
 ## Requirements
 - Board: PYNQ-Z2
