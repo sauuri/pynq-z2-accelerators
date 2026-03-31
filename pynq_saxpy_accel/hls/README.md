@@ -35,6 +35,38 @@ extern "C" void saxpy(
 
 
 # saxpy.cpp
+```
+#pragma HLS INTERFACE m_axi port=x offest=slave bundle=gmem0 depth=1024
+#pragma HLS INTERFACE m_axi port=x offest=slave bundle=gmem1 depth=1024
+```
+###`m_axi`
+- AXI Master 인터페이스. FPGA가 PS(ARM) DRAM에 직접 접근할 수 있게 해줌.
+  PS(ARM) DRAM (Processing System, 컴퓨터 두뇌 쪽)
+      ↑↓ (AXI Master - FPGA가 주도권 가짐)
+    FPGA PL  (Programmable Logic, 회로를 직접 만드는 FPGA 쪽)
+
+  개념 설명
+  - PS, PL이 서로 메모리(DRAM)을 주고받을 때 AXI 라는 길을 씀(PS 안에는 ARM CPU가 들어 있음)
+  - AXI는 데이터를 주고 받는 인터페이스 규칙(PS, PL, DRAM 사이를 연결하는 도로 규칙)
+    즉, 어떻게 주소를 보내고, 데이터를 읽고 쓰고, 완료를 알릴지에 대한 약속이 AXI
+  - AXI Master?
+    Master는 먼저 요청을 보내는 쪽(이 주소의 데이터를 읽어와, 이 주소에 데이터를 써)
+    반대로 Slave는 요청을 받는 쪽임.
+    
+### `offset=slave`
+- 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
